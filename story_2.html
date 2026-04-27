@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sci-Fi World // Digital Archive // Story 02</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Design System -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe7",
+                        "tertiary-container": "#dbdbdb",
+                        "on-secondary-container": "#fff6fc",
+                        "on-secondary-fixed": "#320047",
+                        "on-primary-container": "#006a71",
+                        "primary-fixed": "#74f5ff",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary": "#520072",
+                        "on-surface": "#e5e1e4",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#74009f",
+                        "on-surface-variant": "#b9cacb",
+                        "secondary": "#ebb2ff",
+                        "surface-container-low": "#1c1b1d",
+                        "tertiary": "#f8f7f7",
+                        "secondary-fixed-dim": "#ebb2ff",
+                        "primary-container": "#00f2ff",
+                        "error-container": "#93000a",
+                        "primary": "#e1fdff",
+                        "surface-container": "#201f21",
+                        "secondary-container": "#b600f8",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#353437",
+                        "outline": "#849495",
+                        "on-tertiary": "#2f3131",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#002022",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-variant": "#353437",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary-fixed": "#f8d8ff",
+                        "surface-bright": "#39393b",
+                        "surface": "#131315",
+                        "on-tertiary-container": "#5f6060",
+                        "inverse-on-surface": "#313032",
+                        "background": "#131315",
+                        "surface-container-lowest": "#0e0e10",
+                        "inverse-primary": "#00696f",
+                        "surface-dim": "#131315",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e5e1e4",
+                        "primary-fixed-dim": "#00dbe7",
+                        "on-primary": "#00363a",
+                        "surface-container-high": "#2a2a2c",
+                        "on-background": "#e5e1e4",
+                        "outline-variant": "#3a494b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin": "48px",
+                        "container-max": "1440px"
+                    },
+                    fontFamily: {
+                        "headline-xl": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-xl": ["4rem", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "label-caps": ["0.75rem", { lineHeight: "1", letterSpacing: "0.15em", fontWeight: "600" }],
+                        "body-md": ["1rem", { lineHeight: "1.6", letterSpacing: "0em", fontWeight: "400" }],
+                        "body-lg": ["1.125rem", { lineHeight: "1.7", letterSpacing: "0em", fontWeight: "400" }],
+                        "headline-md": ["1.5rem", { lineHeight: "1.3", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "headline-lg": ["2.5rem", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Subtle scanline effect for the background */
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative font-body-md text-body-md overflow-x-hidden selection:bg-surface-tint selection:text-on-primary">
+<!-- Atmospheric Background Overlay -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,219,231,0.05),transparent_50%)]"></div>
+<div class="absolute inset-0 scanlines opacity-50"></div>
+<div class="absolute inset-0 bg-[linear-gradient(rgba(132,148,149,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(132,148,149,0.03)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+</div>
+<!-- SHARED COMPONENT: TopNavBar -->
+<header class="bg-slate-950/80 backdrop-blur-2xl fixed top-0 w-full border-b border-cyan-500/30 border-b-[0.5px] border-cyan-500/20 shadow-[0_4px_30px_rgba(0,0,0,0.5)] z-50">
+<div class="flex justify-between items-center px-12 py-4 max-w-[1440px] mx-auto w-full z-50">
+<!-- Brand Logo -->
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]">
+                SCI-FI WORLD
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm">
+<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer" href="index.html">
+                    Home
+                </a>
+<!-- Active State Applied Here based on Page Intent -->
+<a class="text-cyan-400 border-b border-cyan-400 pb-1 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer" href="stories_archive.html">
+                    Stories
+                </a>
+<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer" href="aboutus.html">
+                    About Us
+                </a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4">
+<a href = "Denied.html" class="text-slate-400 hover:text-cyan-200 transition-colors active:scale-95 duration-200 cursor-pointer flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a href="Denied.html" class="text-slate-400 hover:text-cyan-200 transition-colors active:scale-95 duration-200 cursor-pointer flex items-center justify-center">
+<span class="material-symbols-outlined">settings_input_component</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="relative z-10 max-w-container-max mx-auto px-12 pt-[120px] pb-24">
+<!-- Data Stream Breadcrumb -->
+<div class="flex items-center gap-3 mb-12 border-b border-outline/20 pb-4">
+<span class="w-2 h-2 bg-surface-tint shadow-[0_0_8px_rgba(0,219,231,0.8)]"></span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Archive Core // Sector 4 // Object ID: 899-X</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Hero & Content -->
+<div class="md:col-span-8 flex flex-col gap-8">
+<!-- Hero Header Box -->
+<div class="relative bg-surface-container/60 backdrop-blur-xl border border-outline/30 p-8 pt-12 overflow-hidden group">
+<!-- Decorative Corner Nodes -->
+<div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-surface-tint"></div>
+<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-surface-tint"></div>
+<div class="relative z-10 flex flex-col gap-6">
+<!-- EDITABLE: Story Title -->
+<!-- [STORY TITLE HERE] -->
+<h1 class="font-headline-xl text-headline-xl text-primary drop-shadow-[0_0_12px_rgba(225,253,255,0.3)]">
+                            Godbuilder
+                        </h1>
+<!-- EDITABLE: Story Teaser -->
+<!-- [STORY TEASER HERE] -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-surface-tint/50 pl-4">
+                           In the industrial city of Grey Harbor, old gods have been forgotten and replaced by engines, factories, and machines. But beneath the smoke and steel, a secret organization called The Builders is trying to create a new god—not through faith, but through technology.
+
+White Luo, once a quiet boy, is turned into an experimental vessel meant to contain the stolen faith of the city. As his body becomes less human and the voices of Grey Harbor flood into his mind, he discovers the truth behind The Builders' plan. Before dawn, he must decide whether to become the god they designed—or return the city's faith to where it truly belongs.
+                        </p>
+</div>
+</div>
+<!-- Main Story Text Area -->
+<div class="bg-surface/80 backdrop-blur-2xl border-t-2 border-surface-tint p-8 lg:p-12 shadow-[inset_0_0_40px_rgba(0,219,231,0.02)] relative">
+<!-- Data lines -->
+<div class="absolute left-4 top-0 bottom-0 w-px bg-outline/10"></div>
+<div class="absolute right-4 top-0 bottom-0 w-px bg-outline/10"></div>
+<div class="font-label-caps text-label-caps text-surface-tint mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">subject</span>
+                        DOCUMENT STREAM ACTIVATED
+                    </div>
+<!-- EDITABLE: Main Story Content -->
+<!-- [FULL STORY CONTENT HERE] -->
+<article class="font-body-md text-body-md text-on-surface space-y-6 leading-relaxed max-w-prose mx-auto">
+<p>
+                            White Luo, a quiet, meticulous and brave boy, slipped through the alleys of Grey Harbor with a rusty key in his sleeve.
+                        </p>
+<p>
+                            Steam hissed from the massive tubes over his head, and the engine in the center of Grey Harbor pumped like the beating of a heart. Along the riverside, the mingled sounds of flowing water, factory machines and people's whispers seemed to carry a heavy history of Grey Harbor, meanwhile, the vague and distant legend of the River God.
+                        </p>
+<p>
+                            In Grey Harbor, people used to leave fruits or joss sticks beside the river during May. They believed there was an ancient god living in the river, who would bring them peace and protect the city from storms. However, countless factories and huge smokestacks rose across this land, burying the old legend by the magic of industrial progress. The god may not have disappeared, but fewer and fewer people knew how to talk to him.
+                        </p>
+<p>
+                            White Luo remembered.
+                        </p>
+<p>
+                            Ten years ago, White Luo was secretly taken to a mysterious underground organization by a group of people who claimed to be The Builders. They told White Luo: "The world is changing. The age of prayer is ending. There is no more need for human to believe in an imaginary god made of water, fog or prayer. It needs something stronger, something precise, something designed and built to control and manage everything."
+                        </p>
+<p>
+                            "A god," a thin man in the front said, eyes glistening with metallic luster, "God should exist for long time, not dependent on faith."
+                        </p>
+<p>
+                            White Luo lost his name that night. He was only known as The Ten.
+                        </p>
+<p>
+                            The transformation of his body began with the spine. The back was cut open, and a bronze wire wrapped in metal replaced the long bone. Intense pain swept over the entire body. Screams from the young boy filled the whole room, but deep under the ground, no one cared enough to pity him.
+                        </p>
+<p>
+                            Pain can be normal in following days.
+                        </p>
+<p>
+                            "He is promising," one doctor spoke to others, "other samples either got mad, or died. Only he survived."
+                        </p>
+<p>
+                            Months passed. White Luo always appeared compliant, but inside his heart, the fire of uncovering the purpose of The Builders never extinguished.
+                        </p>
+<p>
+                            One day, when the guards changed their shifts, he moved.
+                        </p>
+<p>
+                            Climbing the long staircase, White Luo returned to the ground level of Grey Harbor, and hurried straightly to the core archive room of The Builder. Using a rusty key in his sleeve stolen from a careless guard, he opened the heavy metal door.
+                        </p>
+<p>
+                            Rows of iron cabinets held old experiment records and designs, with the dim light cast upon them, creating a chilling sense of solemnity.
+                        </p>
+<p>
+                            After searching through several files, White Luo found his own record. He removed layers of tangled wires, opened the kraft bag, and took out the papers full of hand-writing words.
+                        </p>
+<p>
+                            "... After current modification, his body has been tested to have enough strength to contain a part of 'Faith', and next, we will ..."
+                        </p>
+<p>
+                            A sudden and unexpected noise hit White Luo's back. The door was kicked open. These researchers have noticed his missing and followed the trail all the way here.
+                        </p>
+<p>
+                            White Luo was forced back to that icy metal bed. Next came physical punishment.
+                        </p>
+<p>
+                            However, he got a general idea for what The Builders wanted to do: they were trying to use technology to contain the stolen faith of Grey Harbor and turn him into a new River God.
+                        </p>
+<p>
+                            Second stage of modification was advanced. Researchers put nine silver coins near his heart, not heart, now there was only a micro-engine, supplying energy for the whole designed body. Each coin contained certain fragment - legend, instruction, stories, memory......
+                        </p>
+<p>
+                            Late night, White Luo put his hand on the wall.
+                        </p>
+<p>
+                            He could hear them.
+                        </p>
+<p>
+                            Initially voices. The sound of current flowing through the wires. The sound of rats in the sewer. Gradually, it turned to arguments, prayers, laughter, alarm sounds, bird songs and river sounds. Finally came the ancient legends, the folk tales passed down, the history records on the temple stones...... All these fragments were colliding and rushing to him.
+                        </p>
+<p>
+                            White Luo fainted. In a hazy moment, he heard someone entered and saying something joyfully.
+                        </p>
+<p>
+                            He noticed that there was little time left. He needed to have second try.
+                        </p>
+<p>
+                            One early morning, White Luo slipped out again. He ran toward the engine in the center of the Grey Harbor, where the ritual machines were hidden.
+                        </p>
+<p>
+                            He believed that if he could destroy the machine before dawn, he might stop the Builders from binding him to the city forever.
+                        </p>
+<p>
+                            When he arrived the center region, he found that the machine was already awake, glowing blue light and blowing steam outward.
+                        </p>
+<p>
+                            White Luo forced himself to connect to it, hoping to shut it down from within, and for one brief moment he heard everything - the whispers of workers, the cries of children, and the deep, ancient voice of the River God beneath the city.
+                        </p>
+<p>
+                            Yet he also realized a cruel truth: he could no longer return to being fully human, and if fate demanded that he became a god, would he be the one made for the invasion and plundering?
+                        </p>
+<p>
+                            White Luo made his choice. He sent the stolen Faith surging back through the wires, through the engine, and into the river beneath the city.
+                        </p>
+<p>
+                            The engine collapsed, and Grey Harbor fell silent for a minute.
+                        </p>
+<p>
+                            No one had seen White Luo again.
+                        </p>
+<p>
+                            Yet every May, fruits or joss sticks still appeared beside the river. The people of Grey Harbor began to whisper that maybe the River God had not vanished at all, and he had returned, perhaps, under another name.
+                        </p>
+<!-- End of editable content -->
+</article>
+<div class="mt-12 flex justify-center border-t border-outline/20 pt-8">
+<span class="font-label-caps text-label-caps text-outline tracking-widest">// END OF TRANSMISSION //</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Modules (Asymmetric Bento layout) -->
+<div class="md:col-span-4 flex flex-col gap-6 relative">
+<!-- Vertical Data Line connecting UI -->
+<div class="hidden md:block absolute -left-12 top-0 bottom-0 w-px bg-outline/20"></div>
+<div class="font-label-caps text-label-caps text-secondary mb-2 flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse"></span>
+                    SELECT ACCESS MODE
+                </div>
+<!-- Modality Buttons -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Button 1: Text Reading -->
+<!-- Destination Link Comment: [LINK TO TEXT ONLY READER VIEW] -->
+<a href="story_2.html" class="block w-full text-left bg-surface-container-low/80 backdrop-blur-md border border-surface-tint border-opacity-50 hover:bg-surface-tint/10 hover:border-opacity-100 transition-all duration-300 p-5 relative overflow-hidden group shadow-[inset_0_0_15px_rgba(0,219,231,0.05)] hover:shadow-[inset_0_0_20px_rgba(0,219,231,0.15)]">
+<div class="absolute inset-y-0 left-0 w-1 bg-surface-tint"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline group-hover:text-surface-tint transition-colors">MODE 01</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">Text Reading</span>
+</div>
+<span class="material-symbols-outlined text-surface-tint text-3xl group-hover:scale-110 transition-transform">article</span>
+</div>
+</a>
+<!-- Button 2: Audio -->
+<!-- Destination Link Comment: [LINK TO AUDIO PLAYBACK INTERFACE] -->
+<a href="S2_audio.html" class="block w-full text-left bg-surface-container-low/80 backdrop-blur-md border border-outline/30 hover:border-secondary hover:bg-secondary/5 transition-all duration-300 p-5 relative overflow-hidden group">
+<div class="absolute inset-y-0 left-0 w-1 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline group-hover:text-secondary transition-colors">MODE 02</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">Audio Log</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary text-3xl transition-colors">headphones</span>
+</div>
+</a>
+<!-- Button 3: Visual -->
+<!-- Destination Link Comment: [LINK TO IMMERSIVE VISUAL GALLERY / COMIC VIEW] -->
+<a href="S2_visual.html" class="block w-full text-left bg-surface-container-low/80 backdrop-blur-md border border-outline/30 hover:border-secondary hover:bg-secondary/5 transition-all duration-300 p-5 relative overflow-hidden group">
+<div class="absolute inset-y-0 left-0 w-1 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline group-hover:text-secondary transition-colors">MODE 03</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">Visual Array</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary text-3xl transition-colors">visibility</span>
+</div>
+</a>
+<!-- Button 4: Settings -->
+<!-- Destination Link Comment: [LINK TO SETTINGS PAGE] -->
+<a href="S2_settings.html" class="block w-full text-left bg-surface-container-low/80 backdrop-blur-md border border-outline/30 hover:border-outline hover:bg-surface-bright transition-all duration-300 p-5 relative overflow-hidden group mt-4">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(132,148,149,0.1),transparent_70%)]"></div>
+<div class="flex items-center justify-between relative z-10">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline transition-colors">MODE 04</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant mt-1 text-lg">Settings</span>
+</div>
+<span class="material-symbols-outlined text-outline text-2xl">settings</span>
+</div>
+</a>
+</div>
+<!-- Decorative System Status block -->
+<div class="mt-8 border border-outline/20 p-4 bg-surface-container-highest/30 backdrop-blur-sm font-mono text-xs text-outline/60 flex flex-col gap-2 uppercase tracking-wider">
+<div class="flex justify-between border-b border-outline/10 pb-1">
+<span>Connection</span>
+<span class="text-surface-tint">Secure</span>
+</div>
+<div class="flex justify-between border-b border-outline/10 pb-1">
+<span>Encryption</span>
+<span>AES-1024</span>
+</div>
+<div class="flex justify-between">
+<span>Data Integrity</span>
+<span>99.9%</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SHARED COMPONENT: Footer -->
+<footer class="bg-slate-950 w-full border-t border-slate-800/50 mt-20 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<!-- Links -->
+<div class="flex gap-6 font-mono text-[10px] uppercase tracking-[0.2em]">
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Terminal Access</a>
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<!-- Copyright -->
+<div class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                © 2024 SCI-FI WORLD // DIGITAL ARCHIVE V2.0.4
+            </div>
+<!-- Brand Logo (Footer) -->
+<div class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">
+                SCI-FI WORLD
+            </div>
+</div>
+</footer>
+</body></html>

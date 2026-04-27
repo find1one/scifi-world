@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sci-fi World - Cyber Rebirth Archive</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe7",
+                        "tertiary-container": "#dbdbdb",
+                        "on-secondary-container": "#fff6fc",
+                        "on-secondary-fixed": "#320047",
+                        "on-primary-container": "#006a71",
+                        "primary-fixed": "#74f5ff",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary": "#520072",
+                        "on-surface": "#e5e1e4",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#74009f",
+                        "on-surface-variant": "#b9cacb",
+                        "secondary": "#ebb2ff",
+                        "surface-container-low": "#1c1b1d",
+                        "tertiary": "#f8f7f7",
+                        "secondary-fixed-dim": "#ebb2ff",
+                        "primary-container": "#00f2ff",
+                        "error-container": "#93000a",
+                        "primary": "#e1fdff",
+                        "surface-container": "#201f21",
+                        "secondary-container": "#b600f8",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#353437",
+                        "outline": "#849495",
+                        "on-tertiary": "#2f3131",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#002022",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-variant": "#353437",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary-fixed": "#f8d8ff",
+                        "surface-bright": "#39393b",
+                        "surface": "#131315",
+                        "on-tertiary-container": "#5f6060",
+                        "inverse-on-surface": "#313032",
+                        "background": "#131315",
+                        "surface-container-lowest": "#0e0e10",
+                        "inverse-primary": "#00696f",
+                        "surface-dim": "#131315",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e5e1e4",
+                        "primary-fixed-dim": "#00dbe7",
+                        "on-primary": "#00363a",
+                        "surface-container-high": "#2a2a2c",
+                        "on-background": "#e5e1e4",
+                        "outline-variant": "#3a494b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin": "48px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["4rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["0.75rem", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-md": ["1rem", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["1.125rem", { "lineHeight": "1.7", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-md": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg": ["2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .data-line { position: relative; }
+        .data-line::after {
+            content: '';
+            position: absolute;
+            background-color: var(--tw-colors-outline-variant);
+            opacity: 0.5;
+        }
+        .data-line-h::after { height: 1px; width: 100%; bottom: 0; left: 0; }
+        .data-line-v::after { width: 1px; height: 100%; right: 0; top: 0; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Decorative Background Glow -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full border-b border-cyan-500/30 bg-slate-950/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)] z-50">
+<div class="flex justify-between items-center px-12 py-4 max-w-[1440px] mx-auto w-full z-50">
+<!-- Brand -->
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]">
+                SCI-FI WORLD
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm border-b-[0.5px] border-cyan-500/20 pb-1">
+<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer px-2 py-1" href="index.html">Home</a>
+<a class="text-cyan-400 border-b border-cyan-400 pb-1 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer px-2 py-1" href="stories_archive.html">Stories</a>
+<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer px-2 py-1" href="aboutus.html">About Us</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-cyan-400">
+<a href="Denied.html" class="hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full">
+    <span class="material-symbols-outlined">search</span>
+</a>
+<a href="Denied.html" class="hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full">
+    <span class="material-symbols-outlined">settings_input_component</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin pt-[140px] pb-margin grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Story Content -->
+<article class="md:col-span-8 flex flex-col gap-8">
+<!-- Header Section -->
+<header class="flex flex-col gap-4 border-b border-outline-variant pb-8 relative">
+<!-- Data Stream Node -->
+<div class="absolute bottom-[-2px] left-0 w-1 h-1 bg-primary-container"></div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-widest">Archive // File 04</span>
+<div class="h-px flex-grow bg-gradient-to-r from-outline-variant to-transparent"></div>
+</div>
+<!-- EDITABLE: Story Title -->
+<h1 class="font-headline-xl text-headline-xl text-primary drop-shadow-[0_0_12px_rgba(0,242,255,0.15)]">
+<!-- [STORY 4 TITLE PLACEHOLDER] -->
+                    Cyber Rebirth
+                </h1>
+<!-- EDITABLE: Story Teaser -->
+<p class="font-body-lg text-body-lg text-surface-tint border-l-2 border-primary-container pl-4 ml-1">
+<!-- [STORY 4 TEASER PLACEHOLDER] -->
+                    In 2077, dying from genetic decay, ex-SEAL hacker Morgan risks everything to steal Akaba's miracle cure, only to uncover that "Eternal Repair" is not salvation, but a system of permanent biological slavery.
+                </p>
+</header>
+<!-- Main Text Area (Glassmorphism Card) -->
+<section class="bg-surface-container/60 backdrop-blur-[30px] border-t-2 border-primary-container/50 p-8 rounded-lg shadow-[inset_0_0_20px_rgba(0,242,255,0.02)] relative">
+<!-- Inner Glow simulation -->
+<div class="absolute inset-0 border border-primary-container/10 rounded-lg pointer-events-none"></div>
+<div class="prose prose-invert max-w-none font-body-md text-body-md text-on-surface flex flex-col gap-6">
+<!-- EDITABLE: Main Story Content -->
+<p>
+                        In 2077, the neon of New Los Santos permeated the filth of the slums, in South Los Santos, Grove District. Morgan stared directly into the rearview mirror of his car, seeing his slightly haggard face.
+                    </p>
+<p>
+                        The only possible effective way to cure his genetic decay was the "Eternal Repair" therapy from Akaba Biotech Company - priced at 120 million credits, enough for the people in the slums to work for a hundred years. Morgan, a 30-year-old hacker, survived by exploiting the vulnerabilities in the company's low-end systems. As a veteran of the SEALs, he had once enlisted with great enthusiasm, relying on his extremely high information technology and military skills to achieve numerous victories in battles, but in one operation, he was severely injured by radiation and was discharged from the military, leaving him with the aftereffects of genetic decay. The promised guarantees from the government had somehow ended up in the pocket of some Smith commissioner, leaving him with only one month to live, his organs would completely deteriorate. He had to steal the repair code to gain a new lease on life.
+                    </p>
+<p>
+                        He ruthlessly extinguished the cigarette in his hand, connected to the public network, the neural implant buzzed, watching the virus drill into the core server. Morgan's plan was simple and direct: violent invasion. For three months, he had thoroughly understood the server architecture of Akaba Company and was eyeing the vulnerability of the AI security system "Sky Eye". With advanced military technology scavenged from his comrades, he wrote a customized "ghost virus", disguising it as a routine maintenance package of the company's IT department. After a ten-second cardiac arrest, the virus successfully bypassed the first firewall, and the "Eternal Repair" code lit up on the screen.
+                    </p>
+<p>
+                        Just as Morgan picked up the cigarette and was about to take a deep drag, the screen suddenly turned red. Sky Eye had not been deceived at all! The technical team of Akaba instantly located Morgan's position. Thinking that he would soon be pursued by the dogs of Akaba Company, Morgan frowned and stepped on the accelerator, the roar of the engine followed. Four-star wanted posters hung at the edge of the neon-lit skyscraper in the distance. The helicopter's roar came closer and closer, and the patrol car of the Akaba Rangers had already appeared at the street corner. This was the territory of the Grove Gang, facing fierce and numerous gang members and the complex terrain of the slum, they dared not rush in, but staying here was not an option either. Morgan muttered to himself, immediately slamming the steering wheel, smashing through the guardrail, and rushing down the slope into the abandoned subway tunnel beneath the elevated bridge - this was the most effective star-shielding blind spot in Los Santos. He immediately turned off the engine and the lights, huddling under the seat. Outside the tunnel, footsteps, radio noises, and the car lights sweeping over the opening could be heard, but the helicopter couldn't see and the police car couldn't enter.
+                    </p>
+<p>
+                        After a few minutes, the alarm gradually faded away. Confirming safety, Morgan restarted the engine and sped along the damp alley, heading straight for the super skyscraper H10 in Little Chinatown. The elevator went straight to the eighth floor, the fingerprint lock "beeped" to grant access. The door of Apartment 80716 slid open, a narrow yet familiar space greeted him - a bed, a computer, scattered ammunition, and the never-ending neon outside the window. Morgan locked the safety door behind him, slumped against the door and gasped for breath. The pursuit by Akaba, the threats from the police stars, and the madness of Los Santos had all been temporarily blocked outside. This was the only place in this devouring city where he could catch his breath.
+                    </p>
+<p>
+                        Morgan changed his strategy, finding the black market gene smuggler Old Joe. Old Joe, as an on-duty company dog and also Morgan's comrade, was suffering from an incurable illness and had little time left. Using the internal loopholes of Akaba, they formulated an invasion plan: to infiltrate the high tower laboratory of the Akaba Park, directly copying the code from the server hardware.
+                    </p>
+<p>
+                        On a stormy night, Morgan disguised himself as a maintenance worker, sneaked into the building, successfully passing the security check, accompanied by the night and the thunder and lightning of deep space, with Old Joe's help, they successfully entered the laboratory. He inserted the hard drive into the server, the progress bar slowly climbed, victory was within reach.
+                    </p>
+<p>
+                        Just as the copying was completed, the laboratory alarm went off. The laboratory was instantly sealed, the code on the server was remotely destroyed. The alarms of the Akaba Tower rang loudly, red lights soaked the corridors. Morgan didn't rush towards the heavily guarded elevator. Instead, he hid in the safety passage and waited - three minutes later, the emergency ambulance with sirens blaring arrived. In an instant, Morgan knocked down two of the team members, pulled out the stretcher, and jumped into the driver's seat. The emergency lights flashed, the alarm blared, and the outlaws on the roadside all gave way. As the ambulance rushed out of the gate, Morgan sharply turned the steering wheel, drove into the rain-drenched streets of Los Sante, completely leaving behind the pursuers.
+                    </p>
+<p>
+                        It wasn't until he drove the car into the Qilieye Mountain area, speeding all the way, that Morgan took a deep breath. A sharp pain suddenly came from his brain, "It's a neurotoxin." Having carried out many secret missions before, he of course knew and understood the power of this stuff. He knew he couldn't save anyone anymore. In his hallucinations, he gradually understood that Old Joe had betrayed him. Maybe the company had given Old Joe a glimmer of hope. From the very beginning, the operation was a joke. As his comrade, Old Joe was well aware of Morgan's abilities and reported him to the company, then planned this deception.
+                    </p>
+<p>
+                        "No wonder it went so smoothly." Tears streamed down his cheek. The pain in his heart was even more piercing than the neurotoxin in his brain. At the moment of death, although he knew it was probably meaningless nonsense, he unwillingly read the hard drive in his hand. The cold subtitles that appeared before his eyes left him dumbfounded.
+                    </p>
+<p>
+                        In the twist of fate, Morgan didn't sneak into the correct laboratory. Instead, he accidentally discovered the earth-shattering conspiracy of the Koshan: the so-called "eternal repair" was not healing, but implanting "genetic locks" into the poor, making them dependent on the company's drugs for life and turning them into genetic slaves; while the "perfect genes" of the rich were essentially a privilege to monopolize life.
+                    </p>
+<p>
+                        With the last bit of strength, Morgan didn't steal the repair code anymore. Instead, he leaked the conspiracy of creation and all the side effects of genetic modification to the global public network.
+                    </p>
+<p>
+                        "I got rebirth", he smiled and closed his eyes.
+                    </p>
+</div>
+</section>
+</article>
+<!-- Right Column: Specialized Actions (Bento Grid Style) -->
+<aside class="md:col-span-4 flex flex-col gap-6 pt-2">
+<div class="font-label-caps text-label-caps text-outline uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
+<div class="w-2 h-2 border border-outline-variant rounded-sm flex items-center justify-center">
+<div class="w-1 h-1 bg-outline-variant"></div>
+</div>
+                Access Modes
+            </div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Action: Text Reading -->
+<!-- LINK DESTINATION: /story/4/text -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-primary-container/30 rounded-lg p-5 flex items-center gap-4 overflow-hidden transition-all duration-300 hover:border-primary-container hover:shadow-[0_0_15px_rgba(0,242,255,0.15),inset_0_0_10px_rgba(0,242,255,0.05)]" href="story_4.html">
+<div class="absolute left-0 top-0 h-full w-1 bg-primary-container/0 group-hover:bg-primary-container transition-colors"></div>
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container/20 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">text_snippet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-[1.125rem] font-medium text-on-surface group-hover:text-primary transition-colors">Narrative File</span>
+<span class="font-body-md text-[0.75rem] text-outline">Full incident transcript</span>
+</div>
+</a>
+<!-- Action: Audio -->
+<!-- LINK DESTINATION: /story/4/audio -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-secondary-container/30 rounded-lg p-5 flex items-center gap-4 overflow-hidden transition-all duration-300 hover:border-secondary-container hover:shadow-[0_0_15px_rgba(182,0,248,0.15),inset_0_0_10px_rgba(182,0,248,0.05)]" href="S4_audio.html">
+<div class="absolute left-0 top-0 h-full w-1 bg-secondary-container/0 group-hover:bg-secondary-container transition-colors"></div>
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary-container group-hover:bg-secondary-container/20 group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">audio_file</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-[1.125rem] font-medium text-on-surface group-hover:text-secondary transition-colors">Audio Log</span>
+<span class="font-body-md text-[0.75rem] text-outline">Morgan case narration</span>
+</div>
+</a>
+<!-- Action: Visual -->
+<!-- LINK DESTINATION: /story/4/visual -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-primary-container/30 rounded-lg p-5 flex items-center gap-4 overflow-hidden transition-all duration-300 hover:border-primary-container hover:shadow-[0_0_15px_rgba(0,242,255,0.15),inset_0_0_10px_rgba(0,242,255,0.05)]" href="S4_visual.html">
+<div class="absolute left-0 top-0 h-full w-1 bg-primary-container/0 group-hover:bg-primary-container transition-colors"></div>
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container/20 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-[1.125rem] font-medium text-on-surface group-hover:text-primary transition-colors">Visual Record</span>
+<span class="font-body-md text-[0.75rem] text-outline">Rooftop surveillance frame</span>
+</div>
+</a>
+<!-- Action: Notes / Background -->
+<!-- LINK DESTINATION: /story/4/notes -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant rounded-lg p-5 flex items-center gap-4 overflow-hidden transition-all duration-300 hover:border-surface-tint hover:shadow-[0_0_15px_rgba(0,219,231,0.1),inset_0_0_10px_rgba(0,219,231,0.05)]" href="S4_settings.html">
+<div class="absolute left-0 top-0 h-full w-1 bg-surface-tint/0 group-hover:bg-surface-tint transition-colors"></div>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant group-hover:bg-surface-tint/20 group-hover:text-surface-tint transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-[1.125rem] font-medium text-on-surface group-hover:text-surface-tint transition-colors">World Setting</span>
+<span class="font-body-md text-[0.75rem] text-outline">Lore, factions, and control systems</span>
+</div>
+</a>
+</div>
+<!-- Structural Divider -->
+<div class="w-full h-px bg-outline-variant/30 mt-4 relative">
+<div class="absolute right-0 top-[-2px] w-1 h-1 bg-outline-variant"></div>
+</div>
+</aside>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t border-slate-800/50 mt-20 bg-slate-950">
+<div class="border-t border-slate-800"></div>
+<div class="max-w-7xl mx-auto px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<!-- Brand -->
+<div class="text-slate-400 font-bold font-mono text-[10px] uppercase tracking-[0.2em]">
+                SCI-FI WORLD
+            </div>
+<!-- Links -->
+<div class="flex gap-6 font-mono text-[10px] uppercase tracking-[0.2em]">
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Terminal Access</a>
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<!-- Copyright -->
+<div class="text-slate-500 font-mono text-[10px] uppercase tracking-[0.2em]">
+                © 2024 SCI-FI WORLD // DIGITAL ARCHIVE V2.0.4
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SECURE_ARCHIVE_v4.0 - Access Denied</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary": "#00363a",
+                        "inverse-on-surface": "#313032",
+                        "surface-container-low": "#1c1b1d",
+                        "on-tertiary": "#2f3131",
+                        "surface-container-lowest": "#0e0e10",
+                        "primary": "#e1fdff",
+                        "surface-container-highest": "#353437",
+                        "secondary-container": "#b600f8",
+                        "primary-container": "#00f2ff",
+                        "on-error": "#690005",
+                        "outline-variant": "#3a494b",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-container": "#5f6060",
+                        "on-secondary-fixed-variant": "#74009f",
+                        "background": "#131315",
+                        "primary-fixed-dim": "#00dbe7",
+                        "primary-fixed": "#74f5ff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#b9cacb",
+                        "on-primary-fixed": "#002022",
+                        "surface-dim": "#131315",
+                        "on-secondary-container": "#fff6fc",
+                        "surface-variant": "#353437",
+                        "inverse-primary": "#00696f",
+                        "error": "#ffb4ab",
+                        "surface": "#131315",
+                        "surface-bright": "#39393b",
+                        "surface-container": "#201f21",
+                        "surface-container-high": "#2a2a2c",
+                        "outline": "#849495",
+                        "inverse-surface": "#e5e1e4",
+                        "on-secondary": "#520072",
+                        "on-background": "#e5e1e4",
+                        "tertiary-container": "#dbdbdb",
+                        "secondary": "#ebb2ff",
+                        "on-secondary-fixed": "#320047",
+                        "on-primary-fixed-variant": "#004f54",
+                        "tertiary": "#f8f7f7",
+                        "on-surface": "#e5e1e4",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#f8d8ff",
+                        "surface-tint": "#00dbe7",
+                        "secondary-fixed-dim": "#ebb2ff",
+                        "on-primary-container": "#006a71",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin": "48px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-caps": ["0.75rem", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-lg": ["2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["1rem", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["1.125rem", { "lineHeight": "1.7", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-xl": ["4rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            background-image: 
+                linear-gradient(rgba(19, 19, 21, 0.95), rgba(19, 19, 21, 0.95)),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 219, 231, 0.03) 2px, rgba(0, 219, 231, 0.03) 4px);
+            color: theme('colors.on-background');
+        }
+        .data-line-h {
+            height: 0.5px;
+            background: rgba(132, 148, 149, 0.3);
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .data-line-v {
+            width: 0.5px;
+            background: rgba(132, 148, 149, 0.3);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+        .node {
+            width: 4px;
+            height: 4px;
+            background: theme('colors.error');
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 8px theme('colors.error');
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center relative overflow-hidden font-body-md text-body-md">
+<!-- Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-10">
+<div class="absolute inset-0" style="background-size: 48px 48px; background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);"></div>
+</div>
+<!-- Data Stream Lines -->
+<div class="absolute inset-0 pointer-events-none z-0">
+<div class="data-line-h top-[20%]"></div>
+<div class="data-line-h top-[80%]"></div>
+<div class="data-line-v left-[20%]"></div>
+<div class="data-line-v left-[80%]"></div>
+<div class="node top-[20%] left-[20%]"></div>
+<div class="node top-[20%] left-[80%]"></div>
+<div class="node top-[80%] left-[20%]"></div>
+<div class="node top-[80%] left-[80%]"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 w-full max-w-4xl px-margin">
+<!-- Error Card -->
+<div class="relative bg-surface-container/80 backdrop-blur-3xl border border-error/30 rounded shadow-[0_0_50px_rgba(255,180,171,0.1)] p-12 overflow-hidden group">
+<!-- Inner Glow -->
+<div class="absolute inset-0 border border-error/50 rounded shadow-[inset_0_0_20px_rgba(255,180,171,0.2)] pointer-events-none"></div>
+<!-- Header -->
+<div class="flex items-center gap-gutter border-b border-error/20 pb-8 mb-8 relative">
+<span class="material-symbols-outlined text-[64px] text-error drop-shadow-[0_0_15px_rgba(255,180,171,0.8)]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<h1 class="font-headline-xl text-headline-xl text-error drop-shadow-[0_0_10px_rgba(255,180,171,0.5)]">ACCESS DENIED</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-unit uppercase tracking-widest">ERROR_CODE: 403_UNAUTHORIZED</p>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-12">
+<!-- Left Column: Details -->
+<div class="space-y-6">
+<div>
+<p class="font-label-caps text-label-caps text-error mb-2">STATUS</p>
+<p class="font-body-lg text-body-lg text-on-surface">Higher Privileges Required</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-primary-fixed-dim mb-2">ENCRYPTION_LEVEL</p>
+<p class="font-body-lg text-body-lg text-on-surface font-mono">OMEGA_PROTOCOL</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-secondary-fixed-dim mb-2">SECURITY_VIOLATION</p>
+<p class="font-body-lg text-body-lg text-on-surface">BIOMETRIC_MISMATCH DETECTED</p>
+</div>
+</div>
+<!-- Right Column: System Output -->
+<div class="bg-surface-container-lowest/80 border border-outline-variant p-6 rounded relative">
+<p class="font-label-caps text-label-caps text-outline mb-4">SYSTEM_LOG_OUTPUT</p>
+<div class="font-mono text-sm text-on-surface-variant opacity-80 space-y-2">
+<p>&gt; Handshake initiated...</p>
+<p>&gt; Verifying credentials...</p>
+<p class="text-error">&gt; FATAL: Credential validation failed.</p>
+<p>&gt; IP Logged: 192.168.**.**</p>
+<p>&gt; Initiating lockdown protocol.</p>
+<p class="animate-pulse">&gt; Awaiting override...</p>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-between border-t border-outline-variant pt-8">
+<p class="font-label-caps text-label-caps text-on-surface-variant hidden md:block">PLEASE CONTACT SECTOR COMMANDER FOR ASSISTANCE</p>
+<a class="inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim/10 hover:shadow-[0_0_20px_rgba(0,219,231,0.3)] transition-all duration-300 rounded group" href="homepage.html">
+<span class="font-label-caps text-label-caps uppercase">Return Home</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">home</span>
+</a>
+</div>
+</div>
+</main>
+</body></html>

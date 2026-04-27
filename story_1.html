@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sci-fi World - Story 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Subtle background grid overlay */
+        .bg-tech-grid {
+            background-image: 
+                linear-gradient(to right, rgba(132, 148, 149, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(132, 148, 149, 0.05) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#004f54",
+                      "surface-tint": "#00dbe7",
+                      "tertiary-container": "#dbdbdb",
+                      "on-secondary-container": "#fff6fc",
+                      "on-secondary-fixed": "#320047",
+                      "on-primary-container": "#006a71",
+                      "primary-fixed": "#74f5ff",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "on-secondary": "#520072",
+                      "on-surface": "#e5e1e4",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#74009f",
+                      "on-surface-variant": "#b9cacb",
+                      "secondary": "#ebb2ff",
+                      "surface-container-low": "#1c1b1d",
+                      "tertiary": "#f8f7f7",
+                      "secondary-fixed-dim": "#ebb2ff",
+                      "primary-container": "#00f2ff",
+                      "error-container": "#93000a",
+                      "primary": "#e1fdff",
+                      "surface-container": "#201f21",
+                      "secondary-container": "#b600f8",
+                      "error": "#ffb4ab",
+                      "surface-container-highest": "#353437",
+                      "outline": "#849495",
+                      "on-tertiary": "#2f3131",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary-fixed": "#002022",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-variant": "#353437",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary-fixed": "#f8d8ff",
+                      "surface-bright": "#39393b",
+                      "surface": "#131315",
+                      "on-tertiary-container": "#5f6060",
+                      "inverse-on-surface": "#313032",
+                      "background": "#131315",
+                      "surface-container-lowest": "#0e0e10",
+                      "inverse-primary": "#00696f",
+                      "surface-dim": "#131315",
+                      "on-error": "#690005",
+                      "inverse-surface": "#e5e1e4",
+                      "primary-fixed-dim": "#00dbe7",
+                      "on-primary": "#00363a",
+                      "surface-container-high": "#2a2a2c",
+                      "on-background": "#e5e1e4",
+                      "outline-variant": "#3a494b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "margin": "48px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Space Grotesk"
+                      ],
+                      "label-caps": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "4rem",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "0.75rem",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "1rem",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "1.125rem",
+                              {
+                                      "lineHeight": "1.7",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "1.5rem",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "2.5rem",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-left-6{left:-1.5rem}.-left-\[26px\]{left:-26px}.bottom-0{bottom:0px}.bottom-\[-20\%\]{bottom:-20%}.left-0{left:0px}.left-\[-10\%\]{left:-10%}.right-\[-10\%\]{right:-10%}.top-0{top:0px}.top-2{top:0.5rem}.top-\[-20\%\]{top:-20%}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mt-12{margin-top:3rem}.mt-20{margin-top:5rem}.mt-8{margin-top:2rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-2{height:0.5rem}.h-8{height:2rem}.h-\[1px\]{height:1px}.h-\[2px\]{height:2px}.h-\[40\%\]{height:40%}.h-\[50\%\]{height:50%}.h-\[5px\]{height:5px}.min-h-\[1024px\]{min-height:1024px}.w-2{width:0.5rem}.w-\[0\.5px\]{width:0.5px}.w-\[40\%\]{width:40%}.w-\[50\%\]{width:50%}.w-\[5px\]{width:5px}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-\[1440px\]{max-width:1440px}.max-w-container-max{max-width:1440px}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-gutter{gap:24px}.gap-unit{gap:4px}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded-full{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-\[0\.5px\]{border-bottom-width:0.5px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-cyan-400{--tw-border-opacity:1;border-color:rgb(34 211 238 / var(--tw-border-opacity, 1))}.border-cyan-500\/20{border-color:rgb(6 182 212 / 0.2)}.border-cyan-500\/30{border-color:rgb(6 182 212 / 0.3)}.border-outline-variant\/40{border-color:rgb(58 73 75 / 0.4)}.border-secondary-container\/30{border-color:rgb(182 0 248 / 0.3)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/50{border-color:rgb(30 41 59 / 0.5)}.border-surface-tint{--tw-border-opacity:1;border-color:rgb(0 219 231 / var(--tw-border-opacity, 1))}.border-surface-tint\/30{border-color:rgb(0 219 231 / 0.3)}.bg-background{--tw-bg-opacity:1;background-color:rgb(19 19 21 / var(--tw-bg-opacity, 1))}.bg-error-container\/80{background-color:rgb(147 0 10 / 0.8)}.bg-outline{--tw-bg-opacity:1;background-color:rgb(132 148 149 / var(--tw-bg-opacity, 1))}.bg-outline\/80{background-color:rgb(132 148 149 / 0.8)}.bg-secondary-container{--tw-bg-opacity:1;background-color:rgb(182 0 248 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}.bg-surface-container-highest\/50{background-color:rgb(53 52 55 / 0.5)}.bg-surface-container-low\/60{background-color:rgb(28 27 29 / 0.6)}.bg-surface-container-low\/80{background-color:rgb(28 27 29 / 0.8)}.bg-surface-container-lowest\/50{background-color:rgb(14 14 16 / 0.5)}.bg-surface-tint{--tw-bg-opacity:1;background-color:rgb(0 219 231 / var(--tw-bg-opacity, 1))}.bg-surface-tint\/80{background-color:rgb(0 219 231 / 0.8)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-secondary-container{--tw-gradient-to:rgb(182 0 248 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #b600f8 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-surface-tint{--tw-gradient-to:rgb(0 219 231 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #00dbe7 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-8{padding:2rem}.px-12{padding-left:3rem;padding-right:3rem}.px-4{padding-left:1rem;padding-right:1rem}.px-margin{padding-left:48px;padding-right:48px}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-1{padding-bottom:0.25rem}.pb-20{padding-bottom:5rem}.pl-6{padding-left:1.5rem}.pt-32{padding-top:8rem}.text-center{text-align:center}.text-justify{text-align:justify}.font-\[\'Space_Grotesk\'\]{font-family:'Space Grotesk'}.font-body-lg{font-family:Inter}.font-body-md{font-family:Inter}.font-headline-xl{font-family:Space Grotesk}.font-label-caps{font-family:Space Grotesk}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-body-lg{font-size:1.125rem;line-height:1.7;letter-spacing:0em;font-weight:400}.text-body-md{font-size:1rem;line-height:1.6;letter-spacing:0em;font-weight:400}.text-headline-xl{font-size:4rem;line-height:1.1;letter-spacing:-0.02em;font-weight:700}.text-label-caps{font-size:0.75rem;line-height:1;letter-spacing:0.15em;font-weight:600}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.leading-loose{line-height:2}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-on-background{--tw-text-opacity:1;color:rgb(229 225 228 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(229 225 228 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(185 202 203 / var(--tw-text-opacity, 1))}.text-outline{--tw-text-opacity:1;color:rgb(132 148 149 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(225 253 255 / var(--tw-text-opacity, 1))}.text-secondary-fixed{--tw-text-opacity:1;color:rgb(248 216 255 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-surface-tint{--tw-text-opacity:1;color:rgb(0 219 231 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.opacity-10{opacity:0.1}.opacity-20{opacity:0.2}.opacity-30{opacity:0.3}.opacity-80{opacity:0.8}.shadow-\[0_0_10px_rgba\(0\2c 219\2c 231\2c 0\.5\)\]{--tw-shadow:0 0 10px rgba(0,219,231,0.5);--tw-shadow-colored:0 0 10px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_8px_rgba\(0\2c 219\2c 231\2c 0\.8\)\]{--tw-shadow:0 0 8px rgba(0,219,231,0.8);--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_4px_30px_rgba\(0\2c 0\2c 0\2c 0\.5\)\]{--tw-shadow:0 4px 30px rgba(0,0,0,0.5);--tw-shadow-colored:0 4px 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-\[100px\]{--tw-blur:blur(100px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_0_15px_rgba\(225\2c 253\2c 255\2c 0\.2\)\]{--tw-drop-shadow:drop-shadow(0 0 15px rgba(225,253,255,0.2));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_0_8px_rgba\(0\2c 242\2c 255\2c 0\.5\)\]{--tw-drop-shadow:drop-shadow(0 0 8px rgba(0,242,255,0.5));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-2xl{--tw-backdrop-blur:blur(40px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:border-secondary-container:hover{--tw-border-opacity:1;border-color:rgb(182 0 248 / var(--tw-border-opacity, 1))}.hover\:border-surface-tint:hover{--tw-border-opacity:1;border-color:rgb(0 219 231 / var(--tw-border-opacity, 1))}.hover\:bg-cyan-500\/10:hover{background-color:rgb(6 182 212 / 0.1)}.hover\:bg-secondary-container\/10:hover{background-color:rgb(182 0 248 / 0.1)}.hover\:bg-surface-tint\/10:hover{background-color:rgb(0 219 231 / 0.1)}.hover\:text-cyan-200:hover{--tw-text-opacity:1;color:rgb(165 243 252 / var(--tw-text-opacity, 1))}.hover\:text-cyan-300:hover{--tw-text-opacity:1;color:rgb(103 232 249 / var(--tw-text-opacity, 1))}.hover\:text-cyan-400:hover{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.hover\:text-slate-300:hover{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-\[inset_0_0_15px_rgba\(0\2c 219\2c 231\2c 0\.2\)\]:hover{--tw-shadow:inset 0 0 15px rgba(0,219,231,0.2);--tw-shadow-colored:inset 0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-\[inset_0_0_15px_rgba\(182\2c 0\2c 248\2c 0\.2\)\]:hover{--tw-shadow:inset 0 0 15px rgba(182,0,248,0.2);--tw-shadow-colored:inset 0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-primary{--tw-text-opacity:1;color:rgb(225 253 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-secondary-fixed{--tw-text-opacity:1;color:rgb(248 216 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 768px){.md\:col-span-4{grid-column:span 4 / span 4}.md\:col-span-8{grid-column:span 8 / span 8}.md\:mt-0{margin-top:0px}.md\:block{display:block}.md\:flex{display:flex}.md\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:p-16{padding:4rem}}</style></head>
+<body class="bg-background text-on-background min-h-[1024px] flex flex-col font-body-md overflow-x-hidden bg-tech-grid relative" data-mode="connect" data-stitch-vh="min-h-[1024px]===min-h-screen">
+<!-- Ambient Glow Layers -->
+<div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-surface-tint opacity-10 blur-[120px] rounded-full pointer-events-none z-0"></div>
+<div class="fixed bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-secondary-container opacity-10 blur-[100px] rounded-full pointer-events-none z-0"></div>
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full border-b border-cyan-500/30 bg-slate-950/80 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)] z-50">
+<div class="border-b-[0.5px] border-cyan-500/20">
+<div class="flex justify-between items-center px-12 py-4 max-w-[1440px] mx-auto w-full z-50">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]">
+                    SCI-FI WORLD
+                </div>
+<nav class="hidden md:flex gap-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm">
+<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer" href="index.html">Home</a>
+<a class="text-cyan-400 border-b border-cyan-400 pb-1 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer" href="stories_archive.html">Stories</a>
+<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer" href="aboutus.html">About Us</a>
+</nav>
+<div class="flex gap-4 text-cyan-400">
+<a href = "Denied.html" class="hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a href = "Denied.html" class="hover:bg-cyan-500/10 hover:text-cyan-300 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">settings_input_component</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-20 px-margin max-w-container-max mx-auto w-full z-10 relative flex flex-col gap-12">
+<!-- Story Metadata and Title Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-8 flex flex-col gap-6 relative">
+<!-- Data Stream Line -->
+<div class="absolute -left-6 top-0 bottom-0 w-[0.5px] bg-outline opacity-30 hidden md:block"></div>
+<div class="absolute -left-[26px] top-2 w-[5px] h-[5px] bg-surface-tint hidden md:block shadow-[0_0_8px_rgba(0,219,231,0.8)]"></div>
+<div class="font-label-caps text-label-caps text-surface-tint uppercase tracking-[0.2em]">Archive Entry // Primary Narrative</div>
+<!-- EDITABLE: Story Title -->
+<h1 class="font-headline-xl text-headline-xl text-primary drop-shadow-[0_0_15px_rgba(225,253,255,0.2)]">
+                    [YILO]
+                </h1>
+<!-- EDITABLE: Story Teaser -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl border-l-2 border-surface-tint pl-6 py-2 bg-surface-container-lowest/50 backdrop-blur-sm">
+                    [Todd Zhang0823]
+                </p>
+</div>
+<!-- Specialized Action Buttons (Bento Style Grid) -->
+<div class="md:col-span-4 grid grid-cols-2 gap-unit mt-8 md:mt-0">
+<!-- Link destination for Text Reading -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-surface-tint/30 hover:border-surface-tint p-4 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-surface-tint/10 hover:shadow-[inset_0_0_15px_rgba(0,219,231,0.2)]" href="#">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-surface-tint to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-surface-tint text-3xl group-hover:scale-110 transition-transform">menu_book</span>
+<span class="font-label-caps text-label-caps text-on-surface group-hover:text-primary transition-colors">Text Reading</span>
+</a>
+<!-- Link destination for Audio -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-secondary-container/30 hover:border-secondary-container p-4 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-secondary-container/10 hover:shadow-[inset_0_0_15px_rgba(182,0,248,0.2)]" href="Yilo_audio.html">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary-container to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl group-hover:scale-110 transition-transform">headphones</span>
+<span class="font-label-caps text-label-caps text-on-surface group-hover:text-secondary-fixed transition-colors">Audio</span>
+</a>
+<!-- Link destination for Visual -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-surface-tint/30 hover:border-surface-tint p-4 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-surface-tint/10 hover:shadow-[inset_0_0_15px_rgba(0,219,231,0.2)]" href="Yilo_visual.html">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-surface-tint to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-surface-tint text-3xl group-hover:scale-110 transition-transform">visibility</span>
+<span class="font-label-caps text-label-caps text-on-surface group-hover:text-primary transition-colors">Visual</span>
+</a>
+<!-- Link destination for Notes / Background -->
+<a class="group relative bg-surface-container-low/80 backdrop-blur-xl border border-secondary-container/30 hover:border-secondary-container p-4 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-secondary-container/10 hover:shadow-[inset_0_0_15px_rgba(182,0,248,0.2)]" href="Yilo_settings.html">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary-container to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl group-hover:scale-110 transition-transform">settings</span>
+<span class="font-label-caps text-label-caps text-on-surface group-hover:text-secondary-fixed transition-colors text-center">Setting</span>
+</a>
+</div>
+</div>
+<!-- Main Text Area (Simulated Data Screen) -->
+<div class="relative w-full mt-12 bg-surface-container-low/60 backdrop-blur-2xl border border-outline-variant/40 overflow-hidden">
+<!-- Glassmorphism decorative top bar -->
+<div class="h-8 border-b border-outline-variant/40 bg-surface-container-highest/50 flex items-center px-4 justify-between">
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-error-container/80"></div>
+<div class="w-2 h-2 rounded-full bg-surface-tint/80"></div>
+<div class="w-2 h-2 rounded-full bg-outline/80"></div>
+</div>
+<div class="font-mono text-[10px] text-outline uppercase tracking-widest">Decrypted Stream // Secure Connection</div>
+</div>
+<!-- Content Area -->
+<div class="p-8 md:p-16 max-w-4xl mx-auto">
+<div class="font-body-md text-body-md text-on-surface leading-loose space-y-8 text-justify">
+<!-- EDITABLE: Main Story Content -->
+<p class=""><p class="MsoNormal"><span lang="EN-US">When Yilo first learned the term <i>aerial
+root</i>, a familiar, strange feeling he had felt once struck him.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">His teacher described them as roots that
+grew above ground, absorbing moisture from the air. The whole class copied
+notes without interest. Except Yilo, he stared at the diagram and thought of
+the pale roots that surfaced all across Alpha, even in the desert where he
+lived in.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">He had felt this before at eight years old,
+the morning he realized his family had become abnormal. Nothing apparent had
+changed. Yet he could just find something essential had broken. Two months
+later he announced that he could not tolerate the abnormal atmosphere and
+pretend it’s still a family. He asked to be sent to his grandparents’ home. As
+long as he had seen the crack, he could no longer pretend the world are still
+in whole shape.<o:p></o:p></span></p></p>
+<p class=""><p class="MsoNormal"><span lang="EN-US">At that moment he saw another.<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="" lang="EN-US">The roots of the Revelation Tree are said
+to surfaced everywhere humans lived. Temples were built around them. Priests
+said the Tree loved mankind so much that it extended itself even into the desert,
+helping them survive. But Yilo could not believe that.<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="" lang="EN-US">A tree sought water and nutrients to grow,
+bloom and bear fruit. That’s the nature of plants. Even if its divinity is
+believed, it’s still unnatural for it to grow up here. Speaking of blooming and
+bearing fruit, there is no record about that. Then what is the purpose of the
+tree?<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="" lang="EN-US">The ecology knowledge he learnt reminded
+him of a shocking idea: Human are actually also competitors of the Tree. Our
+existence is a competition for Tree’s resource. Why would it help us? <o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Why would a tree help its competitors live?<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="" lang="EN-US">That question became an obsession. Yilo
+began comparing old maps, settlement records, temple dates. Slowly a pattern
+emerged. The roots did not appear first and attract people. People settled, and
+then roots arrived. New districts gained pale threads within months. Abandoned
+places lost them. The Tree was not blessing human life.<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="" lang="EN-US">It was following it and even controlling it.<o:p></o:p></span></p>
+<p class="MsoNormal"><span class="" lang="EN-US">From that moment, Yilo understood one
+thing: no truth found on the ground could be trusted. If he wanted to know what
+the Tree really was, he had to see Alpha from outside.<o:p></o:p></span></p></p>
+<p class=""><p class="MsoNormal"><span lang="EN-US">He chose the night of the Great
+Illumination Festival. While the city gathered in light and prayer, the guard
+is at its weakest. Yilo slipped past the checkpoints and stole a craft small
+enough to launch alone.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Instead of fear he anticipated, he felt
+joyful. Then he looked back.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">The Illumination Festival helped a lot, as
+he could see all the places with light were dominated by roots. However, as the
+spaceship elevated, a pattern emerged from the twisted vegetation. It was a
+face. Yilo felt like his throat was seized. Slowly, he turned around, trying
+not to making eye contact with Alpha.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">He believed that he could not go back. But
+he needed fuel and food. The nearest habitable world was Beta.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Beta is less advanced, but it’s the ideal
+place for Yilo. Their own Revelation Tree had been in sleep for centuries. No
+religion and no abnormal feeling in his life for the first time. Yilo thought
+he belonged here.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">He stayed only a few days.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">At dawn on the seventh morning, screams waked
+him up. Blood flowed on the street like a river. Thorn-covered creature walked
+through the city and killed the residence with an efficiency.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Yilo ran for his ship. By the time he
+reached the sky, loud sound had spread from the city below. The Beta’s Tree’s
+branches were fetching for him and trying to shoot him down. He escaped only
+because Alpha’s craft was faster.<o:p></o:p></span></p></p>
+<p class=""><p class="MsoNormal"><span lang="EN-US">There was nowhere left to go for him. The
+correctness he had been chasing for was deadly. The space is too large and
+lonely. After all, he was only 18. He returned home.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">He expected prison, even execution. However,
+priests summoned him and led him into the central room of the greatest temple,
+where the sacred main root located. Then the Tree spoke with no sound, but with
+meaning directly into his mind.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">The planets were alive and the Trees were
+their will. Matter within the galaxy was limited. To survive, a Tree had to conquer
+the other planets. Human are bred for colonization and gathering resource. But
+they might learn to rebel, to leave, to carry away the precious matter. Therefore,
+religion was necessary to tie these livestock. And these roots distributed were
+used to supervise them.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">As for Beta, it was just a reset because
+people there were unqualified and the Tree had consumed its patience. The good
+news was Alpha was content with them now.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Everything fit. Yilo finally found truth he
+was desperate for. “But if a system was born with the most fundamental flaws,
+wouldn’t it come to an end inevitably?” 
+He thought about it but didn’t ask.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">“Are you trying to engage me in your plan?”
+he asked. He imagined a secret order, the few served directly for the Tree. He
+imagined that seeing the truth had made him different. Because it seemed there
+were nothing better than that.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">The answer was simple -- No. Nothing about
+his fault. The Tree simply didn’t care about an ant. The Tree had no need of
+him. It had not summoned him because he was special. It had watched him just
+for fun. There were thousands of people in the history thinking they were
+special in countless loop. That was all. He would be returned to ordinary life
+and allowed to do whatever he chose, because individual unrest meant nothing at
+this scale.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">When Yilo left the temple, the same people
+still knelt beside the same roots under the same desert sun.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Nothing had changed.<o:p></o:p></span></p></p>
+</div>
+</div>
+<!-- Scanline decoration -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-surface-tint opacity-20 shadow-[0_0_10px_rgba(0,219,231,0.5)]"></div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-slate-800/50 mt-20 bg-slate-950 border-t border-slate-800 z-50">
+<div class="max-w-7xl mx-auto px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-400 font-bold opacity-80 hover:opacity-100">
+<span class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">© 2024 SCI-FI WORLD // DIGITAL ARCHIVE V2.0.4</span>
+</div>
+<nav class="flex gap-6 font-mono text-[10px] uppercase tracking-[0.2em]">
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Terminal Access</a>
+<a class="text-slate-600 hover:text-slate-300 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

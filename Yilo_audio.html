@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config" id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#c6c6c6",
+            "on-tertiary-container": "#5f6060",
+            "on-secondary-fixed-variant": "#74009f",
+            "primary-fixed-dim": "#00dbe7",
+            "background": "#131315",
+            "primary-fixed": "#74f5ff",
+            "on-tertiary-fixed-variant": "#454747",
+            "tertiary-fixed": "#e2e2e2",
+            "on-surface-variant": "#b9cacb",
+            "on-primary-fixed": "#002022",
+            "on-secondary-container": "#fff6fc",
+            "surface-dim": "#131315",
+            "surface-variant": "#353437",
+            "inverse-primary": "#00696f",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed": "#1a1c1c",
+            "on-primary": "#00363a",
+            "inverse-on-surface": "#313032",
+            "surface-container-low": "#1c1b1d",
+            "surface-container-lowest": "#0e0e10",
+            "primary": "#e1fdff",
+            "on-tertiary": "#2f3131",
+            "secondary-container": "#b600f8",
+            "primary-container": "#00f2ff",
+            "on-error": "#690005",
+            "surface-container-highest": "#353437",
+            "outline-variant": "#3a494b",
+            "secondary-fixed": "#f8d8ff",
+            "surface-tint": "#00dbe7",
+            "secondary-fixed-dim": "#ebb2ff",
+            "on-primary-container": "#006a71",
+            "on-error-container": "#ffdad6",
+            "surface-bright": "#39393b",
+            "surface": "#131315",
+            "surface-container": "#201f21",
+            "surface-container-high": "#2a2a2c",
+            "outline": "#849495",
+            "inverse-surface": "#e5e1e4",
+            "on-secondary": "#520072",
+            "tertiary-container": "#dbdbdb",
+            "secondary": "#ebb2ff",
+            "on-secondary-fixed": "#320047",
+            "on-background": "#e5e1e4",
+            "on-primary-fixed-variant": "#004f54",
+            "on-surface": "#e5e1e4",
+            "error-container": "#93000a",
+            "tertiary": "#f8f7f7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "container-max": "1440px",
+            "unit": "4px",
+            "margin": "48px"
+          },
+          "fontFamily": {
+            "headline-md": ["Space Grotesk"],
+            "label-caps": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-xl": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-md": ["1.5rem", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+            "headline-lg": ["2.5rem", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-md": ["1rem", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+            "body-lg": ["1.125rem", {"lineHeight": "1.7", "letterSpacing": "0em", "fontWeight": "400"}],
+            "headline-xl": ["4rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<!-- Custom Styles -->
+<style data-purpose="custom-utilities">
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    .scanline-overlay {
+      background: linear-gradient(to bottom, transparent 50%, rgba(0, 242, 255, 0.05) 50%);
+      background-size: 100% 4px;
+    }
+    .waveform-bar {
+      width: 4px;
+      background: #00f2ff;
+      box-shadow: 0 0 12px rgba(0, 242, 255, 0.6);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container flex overflow-hidden">
+<!-- BEGIN: SideNavBar -->
+<aside class="w-64 h-screen bg-slate-950/60 backdrop-blur-3xl border-r border-cyan-900/40 shadow-[20px_0_40px_rgba(0,0,0,0.4)] flex flex-col justify-center relative z-40">
+<nav class="flex flex-col w-full">
+<a class="text-slate-500 px-8 py-6 flex items-center gap-4 hover:text-slate-200 hover:bg-white/5 transition-colors font-['Space_Grotesk'] uppercase text-xs tracking-widest" href="story_1.html">
+<span class="material-symbols-outlined text-xl">auto_stories</span> NARRATIVE
+      </a>
+<a class="bg-cyan-500/10 text-cyan-400 border-r-4 border-cyan-400 px-8 py-6 flex items-center gap-4 font-['Space_Grotesk'] uppercase text-xs tracking-widest transition-transform translate-x-1" href="Yilo_audio.html">
+<span class="material-symbols-outlined text-xl">graphic_eq</span> AUDIO
+      </a>
+<a class="text-slate-500 px-8 py-6 flex items-center gap-4 hover:text-slate-200 hover:bg-white/5 transition-colors font-['Space_Grotesk'] uppercase text-xs tracking-widest" href="Yilo_visual.html">
+<span class="material-symbols-outlined text-xl">visibility</span> VISUAL
+      </a>
+<a class="text-slate-500 px-8 py-6 flex items-center gap-4 hover:text-slate-200 hover:bg-white/5 transition-colors font-['Space_Grotesk'] uppercase text-xs tracking-widest" href="Yilo_settings.html">
+<span class="material-symbols-outlined text-xl">public</span> SETTING
+      </a>
+</nav>
+</aside>
+<!-- END: SideNavBar -->
+<!-- BEGIN: MainContentCanvas -->
+<main class="flex-1 h-screen relative overflow-hidden flex items-center justify-center">
+<!-- Background Grid & Noise -->
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<div class="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+</div>
+<div class="absolute inset-0 z-0 opacity-5 pointer-events-none scanline-overlay"></div>
+<div class="relative z-10 w-full max-w-4xl px-12 flex flex-col items-center">
+<!-- Audio Source URL Placeholder -->
+<audio id="audio-player" src="https://res.cloudinary.com/dvqqqij5t/video/upload/v1776957668/en-US-AndrewMultilingualNeural-When_Yilo_-1776955363487_1_brnm0m.mp3"></audio>
+<!-- BEGIN: CentralVisualizerArea -->
+<div class="w-full flex items-center justify-center relative mb-16">
+<!-- Glowing Backdrop for Visualizer -->
+<div class="absolute inset-0 bg-cyan-500/5 blur-[120px] rounded-full scale-75"></div>
+<div class="w-full h-80 flex items-center justify-center gap-2 relative z-10">
+<!-- Static Waveform Mockup -->
+<div class="waveform-bar h-[10%] opacity-20"></div>
+<div class="waveform-bar h-[30%] opacity-30"></div>
+<div class="waveform-bar h-[15%] opacity-20"></div>
+<div class="waveform-bar h-[40%] opacity-40"></div>
+<div class="waveform-bar h-[25%] opacity-30"></div>
+<div class="waveform-bar h-[60%] opacity-50"></div>
+<div class="waveform-bar h-[85%] opacity-80"></div>
+<div class="waveform-bar h-[30%] opacity-40"></div>
+<div class="waveform-bar h-[70%]"></div>
+<div class="waveform-bar h-[95%]"></div>
+<div class="waveform-bar h-[65%]"></div>
+<div class="waveform-bar h-[40%] opacity-60"></div>
+<div class="waveform-bar h-[20%] opacity-30"></div>
+<div class="waveform-bar h-[55%] opacity-50"></div>
+<div class="waveform-bar h-[80%]"></div>
+<div class="waveform-bar h-[100%] shadow-[0_0_20px_rgba(0,242,255,0.8)]"></div>
+<div class="waveform-bar h-[75%]"></div>
+<div class="waveform-bar h-[45%] opacity-70"></div>
+<div class="waveform-bar h-[90%]"></div>
+<div class="waveform-bar h-[35%] opacity-40"></div>
+<div class="waveform-bar h-[60%] opacity-60"></div>
+<div class="waveform-bar h-[25%] opacity-30"></div>
+<div class="waveform-bar h-[15%] opacity-20"></div>
+<div class="waveform-bar h-[50%] opacity-40"></div>
+<div class="waveform-bar h-[80%] opacity-80"></div>
+<div class="waveform-bar h-[40%] opacity-50"></div>
+<div class="waveform-bar h-[70%]"></div>
+<div class="waveform-bar h-[90%]"></div>
+<div class="waveform-bar h-[55%] opacity-60"></div>
+<div class="waveform-bar h-[30%] opacity-40"></div>
+<div class="waveform-bar h-[10%] opacity-20"></div>
+<div class="waveform-bar h-[20%] opacity-30"></div>
+</div>
+<!-- Digital Node Overlays -->
+<div class="absolute top-0 left-0 border-l border-t border-cyan-400/30 w-12 h-12"></div>
+<div class="absolute bottom-0 right-0 border-r border-b border-cyan-400/30 w-12 h-12"></div>
+</div>
+<!-- END: CentralVisualizerArea -->
+<!-- BEGIN: PlaybackInterface -->
+<div class="w-full bg-slate-950/40 backdrop-blur-xl border border-white/5 rounded-xl p-10">
+<!-- Scrubbing Interface -->
+<div class="relative w-full h-12 mb-10 group cursor-pointer">
+<div class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-[1px] bg-white/20"></div>
+<div class="absolute top-1/2 -translate-y-1/2 left-0 w-[42%] h-[1px] bg-cyan-400 shadow-[0_0_8px_rgba(0,242,255,0.8)]"></div>
+<div class="absolute top-1/2 -translate-y-1/2 left-[42%] w-2 h-12 bg-cyan-400 shadow-[0_0_15px_rgba(0,242,255,1)]"></div>
+<!-- Time Markers -->
+<div class="absolute -bottom-6 left-0 text-[10px] font-['Space_Grotesk'] text-slate-500">00:00</div>
+<div class="absolute -bottom-6 left-[42%] -translate-x-1/2 text-[10px] font-['Space_Grotesk'] text-cyan-400">01:52</div>
+<div class="absolute -bottom-6 right-0 text-[10px] font-['Space_Grotesk'] text-slate-500">04:22</div>
+</div>
+<!-- Controls Cluster -->
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-8">
+<button class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-slate-300 text-2xl">replay_10</span>
+</button>
+<!-- Main Play Toggle -->
+<button class="group flex items-center justify-center w-20 h-20 bg-cyan-500/10 border border-cyan-400 rounded-full hover:bg-cyan-400/20 shadow-[0_0_20px_rgba(0,242,255,0.2)] transition-all active:scale-[0.98]" id="play-button">
+<span class="material-symbols-outlined text-cyan-400 text-4xl" id="play-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-slate-300 text-2xl">forward_10</span>
+</button>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-slate-400 text-2xl">volume_up</span>
+<div class="w-32 h-1 bg-white/10 rounded-full overflow-hidden cursor-pointer">
+<div class="w-[80%] h-full bg-cyan-400 shadow-[0_0_8px_rgba(0,242,255,0.8)]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- END: PlaybackInterface -->
+</div>
+</main>
+<!-- END: MainContentCanvas -->
+<!-- Audio Control Script -->
+<script data-purpose="audio-controls">
+    document.getElementById('play-button').addEventListener('click', function() {
+      const audio = document.getElementById('audio-player');
+      const icon = document.getElementById('play-icon');
+      if (audio.paused) {
+        audio.play();
+        icon.textContent = 'pause';
+      } else {
+        audio.pause();
+        icon.textContent = 'play_arrow';
+      }
+    });
+  </script>
+</body></html>
